@@ -1,0 +1,20 @@
+<div class="container pt-50 pb-50">
+    {{#if errorFlash}}
+    <h1>{{errorFlash}}</h1>
+    {{/if}}
+    {{#if messageFlash}}
+    <h1>{{messageFlash}}</h1>
+    {{/if}}
+    {{#if errorCustom}}
+    <h1>{{errorCustom}}</h1>
+    {{/if}}
+    {{#if error}}
+    <h1>{{error}}</h1>
+    {{/if}}
+    {{#if messageCustom}}
+    <h1>{{messageCustom}}</h1>
+    {{/if}}
+
+    <p>No results to show <br />Go back <a href="/" style="font-weight:800">Home</a></p>
+
+</div>

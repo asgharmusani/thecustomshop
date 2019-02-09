@@ -1,0 +1,338 @@
+{
+    "titlePage": "Ambassador - The Custom Shop | Home",
+    "product": [
+        {
+            "id": 24,
+            "sku": null,
+            "title": "Charcoal Black Two-Piece Suit ",
+            "subtitle": null,
+            "description": "Made from 100% wool, the Super 160s fabric is of the highest quality. This black suit is simple, classic, and appropriate for all occasions. It pairs great with the solid color business dress shirts.",
+            "fabric_id": 24,
+            "category_id": 2,
+            "createdAt": "2018-09-28T08:12:54.000Z",
+            "updatedAt": "2018-09-28T08:12:54.000Z",
+            "ProductImages": [
+                {
+                    "id": 1,
+                    "product_id": 24,
+                    "url": null,
+                    "createdAt": "2018-09-28T08:12:54.000Z",
+                    "updatedAt": "2018-09-28T08:12:54.000Z"
+                }
+            ],
+            "ProductFabric": { "id": 24, "text": "heart_italy", "url": null },
+            "ProductPrices": [
+                {
+                    "id": 1,
+                    "product_id": 24,
+                    "price": 33000,
+                    "discounted_price": null,
+                    "createdAt": "2018-09-28T08:12:54.000Z",
+                    "updatedAt": "2018-09-28T08:12:54.000Z"
+                }
+            ],
+            "ProductCategory": { "id": 2, "category": "formal" },
+            "Tags": []
+        },
+        {
+            "id": 23,
+            "sku": null,
+            "title": "Ink Blue Plaid Two-Piece Suit",
+            "subtitle": null,
+            "description": "This black suit is simple, classic, and appropriate for all occasions. Match it with black or white solid shirt and a black or dark red tie for a more striking look. Upgrade to a three-piece with this suit's matching vest.",
+            "fabric_id": 23,
+            "category_id": 3,
+            "createdAt": "2018-09-28T08:11:54.000Z",
+            "updatedAt": "2018-09-28T08:11:54.000Z",
+            "ProductImages": [
+                {
+                    "id": 1,
+                    "product_id": 23,
+                    "url": null,
+                    "createdAt": "2018-09-28T08:11:54.000Z",
+                    "updatedAt": "2018-09-28T08:11:54.000Z"
+                }
+            ],
+            "ProductFabric": { "id": 23, "text": "check_spain", "url": null },
+            "ProductPrices": [
+                {
+                    "id": 1,
+                    "product_id": 23,
+                    "price": 23000,
+                    "discounted_price": null,
+                    "createdAt": "2018-09-28T08:11:54.000Z",
+                    "updatedAt": "2018-09-28T08:11:54.000Z"
+                }
+            ],
+            "ProductCategory": { "id": 3, "category": "accessories" },
+            "Tags": []
+        },
+        {
+            "id": 22,
+            "sku": null,
+            "title": "Dark Blue and Red Plaid Suit",
+            "subtitle": null,
+            "description": "This black suit is simple, classic, and appropriate for all occasions. Match it with black or white solid shirt and a black or dark red tie for a more striking look. Upgrade to a three-piece with this suit's matching vest.",
+            "fabric_id": 22,
+            "category_id": 3,
+            "createdAt": "2018-09-28T08:11:51.000Z",
+            "updatedAt": "2018-09-28T08:11:51.000Z",
+            "ProductImages": [
+                {
+                    "id": 1,
+                    "product_id": 22,
+                    "url": null,
+                    "createdAt": "2018-09-28T08:11:51.000Z",
+                    "updatedAt": "2018-09-28T08:11:51.000Z"
+                }
+            ],
+            "ProductFabric": { "id": 22, "text": "mold_france", "url": null },
+            "ProductPrices": [
+                {
+                    "id": 1,
+                    "product_id": 22,
+                    "price": 25000,
+                    "discounted_price": null,
+                    "createdAt": "2018-09-28T08:11:51.000Z",
+                    "updatedAt": "2018-09-28T08:11:51.000Z"
+                }
+            ],
+            "ProductCategory": { "id": 3, "category": "accessories" },
+            "Tags": []
+        },
+        {
+            "id": 21,
+            "sku": null,
+            "title": "Business Blue and Black Checked Suit",
+            "subtitle": null,
+            "description": "Made from Super 130s Merino wool blended with cashmere with perfect workmanship and the highest quality. It pairs great with the solid color business dress shirts or even a bright colored T-shirt for a more relaxed and modern style.",
+            "fabric_id": 21,
+            "category_id": 2,
+            "createdAt": "2018-09-28T08:11:49.000Z",
+            "updatedAt": "2018-09-28T08:11:49.000Z",
+            "ProductImages": [
+                {
+                    "id": 1,
+                    "product_id": 21,
+                    "url": null,
+                    "createdAt": "2018-09-28T08:11:49.000Z",
+                    "updatedAt": "2018-09-28T08:11:49.000Z"
+                }
+            ],
+            "ProductFabric": { "id": 21, "text": "synergy_france", "url": null },
+            "ProductPrices": [
+                {
+                    "id": 1,
+                    "product_id": 21,
+                    "price": 20000,
+                    "discounted_price": null,
+                    "createdAt": "2018-09-28T08:11:49.000Z",
+                    "updatedAt": "2018-09-28T08:11:49.000Z"
+                }
+            ],
+            "ProductCategory": { "id": 2, "category": "formal" },
+            "Tags": []
+        },
+        {
+            "id": 20,
+            "sku": null,
+            "title": "Blue Business Suit",
+            "subtitle": null,
+            "description": "This is two-piece business suit is made from 100% wool giving it a breath ability that makes it a good choice any time of year. It uses Super 120s fabric which gives it an elegant appearance and when matched with a fitted T-shirt, it works great as a suit for less formal occasions.",
+            "fabric_id": 20,
+            "category_id": 2,
+            "createdAt": "2018-09-28T08:11:45.000Z",
+            "updatedAt": "2018-09-28T08:11:45.000Z",
+            "ProductImages": [
+                {
+                    "id": 1,
+                    "product_id": 20,
+                    "url": null,
+                    "createdAt": "2018-09-28T08:11:45.000Z",
+                    "updatedAt": "2018-09-28T08:11:45.000Z"
+                }
+            ],
+            "ProductFabric": { "id": 20, "text": "sodales_rome ", "url": null },
+            "ProductPrices": [
+                {
+                    "id": 1,
+                    "product_id": 20,
+                    "price": 30000,
+                    "discounted_price": null,
+                    "createdAt": "2018-09-28T08:11:45.000Z",
+                    "updatedAt": "2018-09-28T08:11:45.000Z"
+                }
+            ],
+            "ProductCategory": { "id": 2, "category": "formal" },
+            "Tags": []
+        },
+        {
+            "id": 19,
+            "sku": null,
+            "title": "Business Blue Two-Piece Suit",
+            "subtitle": null,
+            "description": "This is two-piece business suit is made from 100% wool giving it a breath ability that makes it a good choice any time of year. It uses Super 120s fabric which gives it an elegant appearance and when matched with a fitted T-shirt, it works great as a suit for less formal occasions.",
+            "fabric_id": 19,
+            "category_id": 1,
+            "createdAt": "2018-09-28T08:11:42.000Z",
+            "updatedAt": "2018-09-28T08:11:42.000Z",
+            "ProductImages": [
+                {
+                    "id": 1,
+                    "product_id": 19,
+                    "url": null,
+                    "createdAt": "2018-09-28T08:11:42.000Z",
+                    "updatedAt": "2018-09-28T08:11:42.000Z"
+                }
+            ],
+            "ProductFabric": { "id": 19, "text": "red_italian", "url": null },
+            "ProductPrices": [
+                {
+                    "id": 1,
+                    "product_id": 19,
+                    "price": 30000,
+                    "discounted_price": null,
+                    "createdAt": "2018-09-28T08:11:42.000Z",
+                    "updatedAt": "2018-09-28T08:11:42.000Z"
+                }
+            ],
+            "ProductCategory": { "id": 1, "category": "suits" },
+            "Tags": [
+                { "id": 2, "tag": "three-piece", "ProductTag": { "tag_id": 2, "product_id": 19 } }
+            ]
+        },
+        {
+            "id": 18,
+            "sku": null,
+            "title": "Business Navy Blue Two-Piece Suit",
+            "subtitle": null,
+            "description": "This is two-piece business suit is made from 100% wool giving it a breath ability that makes it a good choice any time of year. It uses Super 120s fabric which gives it an elegant appearance and when matched with a fitted T-shirt, it works great as a suit for less formal occasions.",
+            "fabric_id": 18,
+            "category_id": 3,
+            "createdAt": "2018-09-28T08:11:37.000Z",
+            "updatedAt": "2018-09-28T08:11:37.000Z",
+            "ProductImages": [
+                {
+                    "id": 1,
+                    "product_id": 18,
+                    "url": null,
+                    "createdAt": "2018-09-28T08:11:37.000Z",
+                    "updatedAt": "2018-09-28T08:11:37.000Z"
+                }
+            ],
+            "ProductFabric": { "id": 18, "text": "product_indonesia", "url": null },
+            "ProductPrices": [
+                {
+                    "id": 1,
+                    "product_id": 18,
+                    "price": 40000,
+                    "discounted_price": null,
+                    "createdAt": "2018-09-28T08:11:37.000Z",
+                    "updatedAt": "2018-09-28T08:11:37.000Z"
+                }
+            ],
+            "ProductCategory": { "id": 3, "category": "accessories" },
+            "Tags": []
+        },
+        {
+            "id": 17,
+            "sku": null,
+            "title": "Business Grey Two-Piece Suit",
+            "subtitle": null,
+            "description": "Made from Super 130s Merino wool blended with cashmere with perfect workmanship and the highest quality. It pairs great with the solid color business dress shirts or even a bright colored T-shirt for a more relaxed and modern style.",
+            "fabric_id": 17,
+            "category_id": 2,
+            "createdAt": "2018-09-28T08:11:28.000Z",
+            "updatedAt": "2018-09-28T08:11:28.000Z",
+            "ProductImages": [
+                {
+                    "id": 1,
+                    "product_id": 17,
+                    "url": null,
+                    "createdAt": "2018-09-28T08:11:28.000Z",
+                    "updatedAt": "2018-09-28T08:11:28.000Z"
+                }
+            ],
+            "ProductFabric": { "id": 17, "text": "nylon_spain", "url": null },
+            "ProductPrices": [
+                {
+                    "id": 1,
+                    "product_id": 17,
+                    "price": 38000,
+                    "discounted_price": null,
+                    "createdAt": "2018-09-28T08:11:28.000Z",
+                    "updatedAt": "2018-09-28T08:11:28.000Z"
+                }
+            ],
+            "ProductCategory": { "id": 2, "category": "formal" },
+            "Tags": []
+        },
+        {
+            "id": 16,
+            "sku": null,
+            "title": "Fashion Grey Two-Piece Suit",
+            "subtitle": null,
+            "description": "This dark navy suit made from 90% wool and 10% cashmere with feels comfortable and adds a bit of warmth. It goes perfectly with a black shirt and a black and red striped tie for a understate and elegant look.",
+            "fabric_id": 16,
+            "category_id": 3,
+            "createdAt": "2018-09-28T08:11:12.000Z",
+            "updatedAt": "2018-09-28T08:11:12.000Z",
+            "ProductImages": [
+                {
+                    "id": 1,
+                    "product_id": 16,
+                    "url": null,
+                    "createdAt": "2018-09-28T08:11:12.000Z",
+                    "updatedAt": "2018-09-28T08:11:12.000Z"
+                }
+            ],
+            "ProductFabric": { "id": 16, "text": "networked_serbia", "url": null },
+            "ProductPrices": [
+                {
+                    "id": 1,
+                    "product_id": 16,
+                    "price": 36000,
+                    "discounted_price": null,
+                    "createdAt": "2018-09-28T08:11:12.000Z",
+                    "updatedAt": "2018-09-28T08:11:12.000Z"
+                }
+            ],
+            "ProductCategory": { "id": 3, "category": "accessories" },
+            "Tags": []
+        },
+        {
+            "id": 15,
+            "sku": null,
+            "title": "Deep Grey Fashion Two-Piece Suit",
+            "subtitle": null,
+            "description": "Made from Super 130s Merino wool blended with cashmere with perfect workmanship and the highest quality. It pairs great with the solid color business dress shirts or even a bright colored T-shirt for a more relaxed and modern style.",
+            "fabric_id": 15,
+            "category_id": 2,
+            "createdAt": "2018-09-28T08:10:24.000Z",
+            "updatedAt": "2018-09-28T08:10:24.000Z",
+            "ProductImages": [
+                {
+                    "id": 1,
+                    "product_id": 15,
+                    "url": null,
+                    "createdAt": "2018-09-28T08:10:24.000Z",
+                    "updatedAt": "2018-09-28T08:10:24.000Z"
+                }
+            ],
+            "ProductFabric": { "id": 15, "text": "label_peru", "url": null },
+            "ProductPrices": [
+                {
+                    "id": 1,
+                    "product_id": 15,
+                    "price": 40000,
+                    "discounted_price": null,
+                    "createdAt": "2018-09-28T08:10:24.000Z",
+                    "updatedAt": "2018-09-28T08:10:24.000Z"
+                }
+            ],
+            "ProductCategory": { "id": 2, "category": "formal" },
+            "Tags": []
+        }
+    ],
+    "page": "/"
+}

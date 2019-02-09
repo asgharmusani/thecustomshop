@@ -1,0 +1,53 @@
+{
+    "titlePage": "Ambassador - The Custom Shop | Suits | Two Piece",
+    "product": {
+        "id": 14,
+        "sku": null,
+        "title": "Light Grey Fashion Two Piece Suit",
+        "subtitle": null,
+        "description": "Made from 100% wool, the Super 160s fabric is of the highest quality and give the texture and appearance that you would expect from a luxury suit. For business occasions, pair it with a white shirt and grey tie.",
+        "fabric_id": 14,
+        "category_id": 1,
+        "createdAt": "2018-09-28T08:10:13.000Z",
+        "updatedAt": "2018-09-28T08:10:13.000Z",
+        "ProductImages": [
+            {
+                "id": 1,
+                "product_id": 14,
+                "url": null,
+                "createdAt": "2018-09-28T08:10:13.000Z",
+                "updatedAt": "2018-09-28T08:10:13.000Z"
+            }
+        ],
+        "ProductFabric": {
+            "id": 14,
+            "text": "ipsum_italian ",
+            "url": null
+        },
+        "ProductPrices": [
+            {
+                "id": 1,
+                "product_id": 14,
+                "price": 35000,
+                "discounted_price": null,
+                "createdAt": "2018-09-28T08:10:13.000Z",
+                "updatedAt": "2018-09-28T08:10:13.000Z"
+            }
+        ],
+        "ProductCategory": {
+            "id": 1,
+            "category": "suits"
+        },
+        "Tags": [
+            {
+                "id": 1,
+                "tag": "two-piece",
+                "ProductTag": {
+                    "tag_id": 1,
+                    "product_id": 14
+                }
+            }
+        ]
+    },
+    "page": "/suits/two-piece/Light-Grey-Fashion-Two-Piece-Suit"
+}

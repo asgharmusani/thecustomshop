@@ -1,0 +1,318 @@
+<!--Slider Area Start-->
+<section class="slider-area mb-50">
+  <div class="slider-wrapper theme-default">
+    <!--Slider Background Image Start-->
+    {{!-- <div id="slider" class="nivoSlider"> --}}
+      <div class="testVideo">
+        {{!-- <iframe width="640" height="564" src="https://player.vimeo.com/video/312367083" frameborder="0" allowFullScreen mozallowfullscreen webkitAllowFullScreen></iframe> --}}
+        <video src="/video/13.mp4" oncontextmenu="return false;" poster="/images/thumbnail-trailer.jpg" muted="muted" autoplay loop>
+          {{!--
+          <source src="/video/13.mp4" type="video/mp4"> --}}
+          Your browser does not support the video tag.
+        </video>
+        <div class="filterVideo"></div>
+      </div>
+
+
+      {{!-- <img class=" img-responsive img-fluid" src="/images/img/slider/5.jpg" alt="" title="#htmlcaption" />
+      <img class=" img-responsive img-fluid" src="/images/img/slider/6.jpg" alt="" title="#htmlcaption2" />
+      <img class=" img-responsive img-fluid" src="/images/img/slider/7.jpg" alt="" title="#htmlcaption3" /> --}}
+      {{!-- </div> --}}
+    <!--Slider Background Image End-->
+    <!--1st Slider Caption Start-->
+    {{!--
+    <div id="htmlcaption" class="nivo-html-caption">
+      <div class="slider-caption">
+        <div class="slider-text">
+          <h5 class="wow animated fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">Exclusive Offer -60% Off
+            This
+            Week
+          </h5>
+          <h1 class="wow animated fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">Lucky Day <br><span>Sale 60%
+              Off</span></h1>
+          <h4 class="wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s">Starting at <span>$500.99</span></h4>
+          <div class="slider-button">
+            <a href="#" class="wow button animated fadeInLeft" data-text="Shop now" data-wow-duration="2.5s"
+              data-wow-delay="0.5s">shopping
+              Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div> --}}
+    <!--1st Slider Caption End-->
+    <!--2nd Slider Caption Start-->
+    {{!--
+    <div id="htmlcaption2" class="nivo-html-caption">
+      <div class="slider-caption">
+        <div class="slider-text">
+          <h5 class="wow animated fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">Exclusive Offer -20% Off on
+            Suits
+          </h5>
+          <h1 class="wow animated fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">Select Suit <br><span>Up To
+              20%
+              Off
+            </span></h1>
+          <h4 class="wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s">Starting at <span>$220.99</span></h4>
+          <div class="slider-button">
+            <a href="#" class="wow button animated fadeInLeft" data-text="Shop now" data-wow-duration="2.5s"
+              data-wow-delay="0.5s">shopping
+              Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div> --}}
+    <!--2nd Slider Caption End-->
+    <!--3rd Slider Caption Start-->
+    {{!--
+    <div id="htmlcaption3" class="nivo-html-caption">
+      <div class="slider-caption">
+        <div class="slider-text">
+          <h5 class="wow animated fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">Wedding Wear
+          </h5>
+          <h1 class="wow animated fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">Awesome Deal!<br><span>
+            </span></h1>
+          <h4 class="wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s">Starting at <span>$620.99</span></h4>
+          <div class="slider-button">
+            <a href="#" class="wow button animated fadeInLeft" data-text="Shop now" data-wow-duration="2.5s"
+              data-wow-delay="0.5s">shopping
+              Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div> --}}
+    <!--3rd Slider Caption End-->
+  </div>
+</section>
+<!--Slider Area End-->
+
+<!-- Featured-products-area start -->
+<div class="Featured-products-area pt-30">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="pos_featured_product">
+          <div class="section-title">
+            <h2>Featured products</h2>
+          </div>
+          <div class="row">
+            <div class="featured-products">
+              <div class="product-active owl-carousel">
+                {{#each productFeatured}}
+                <div class="col-md-12">
+                  <div class="single-product">
+                    <div class="product-img">
+                      <a href="/category/{{ProductCategory.category}}/{{Tags.0.tag}}/{{titleLink title}}">
+                        <img class="first-img" src="/data/product/{{id}}/{{ProductImages.0.id}}/300/300" alt="{{title}}">
+                        {{#if ProductFabric}}
+                        <img class="hover-img" src="/data/fabric/{{ProductFabric.id}}/300/300" alt="">
+                        {{/if}}
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h2 class=" text-center" style="line-height: 1.5em;height: 3em;word-break: break-word; padding-right:15px;padding-left:15px;font-weight:bold"><a
+                          href="/category/{{ProductCategory.category}}/{{Tags.0.tag}}/{{titleLink title}}">{{title}}</a></h2>
+                      <div class="product-price">
+                        <span class="new-price" style="font-weight:bold">Rs. {{ProductPrices.0.price}}</span>
+                        <ul class="product-action">
+                          {{!-- <li><a href="#" data-toggle="tooltip" title="Add to Wishlist"><i class="ion-android-favorite-outline"></i></a></li>
+                          --}}
+                          <a class="button add-btn" href="/cart/add/{{id}}" data-toggle="tooltip" title="Add to Cart"
+                            style="cursor:pointer"><i class="fa fa-shopping-cart"></i></a>
+                          {{!-- <li><a href="#" data-toggle="modal" title="Quick View" data-target="#myModal"><i class="ion-android-expand"></i></a></li>
+                          --}}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {{/each}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="block-featured-warpper col-md-6 col-sm-12" style="padding-right:0px;padding-left:0px;">
+        <div class="block-featured">
+          <div class="banner-featured">
+            <img src="/images/journey/featured-products.jpg" alt="">
+            <div class="centered">
+              <h1 class="wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s" style="color:rgb(245, 243, 245)">The
+                Custom Shop</h1>
+              <h3 class="wow animated fadeInUp mt-20" data-wow-duration="1.5s" data-wow-delay="0.5s" style="color:rgb(245, 243, 245)">Perfectly
+                customized to your <b>physique</b></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Featured-products-area end -->
+
+<!--JOurney area start-->
+<div class="journeyDiv container-fluid mt-100 mb-50 pt-40 pb-40" style="background-color:rgb(233, 233, 233)">
+  <h1 class=" text-center mt-10 mb-10 wow animated fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s" style="font-weight: 700;">Journey
+    to your bespoke suit</h1>
+  <h3 class=" text-center wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">Get a suit tailored that
+    speaks who you are</h3>
+
+  <div class="row mt-30">
+    <div class="col-sm-4 col-md-4 forImage text-center">
+      <img src="/images/journey/fabrics.png" alt="select fabric">
+      <h3>Select your fabric</h3>
+      <p class=" pr-80 pl-80">From a collection of finest Italian brands.</p>
+    </div>
+    <div class="col-sm-4 col-md-4 forImage text-center">
+      <img src="/images/journey/give-measure.png" alt="select fabric">
+      <h3 class="rightFloat">Give your Measurements</h3>
+      <p class=" pr-60 pl-60">Professional designers take your measurements.</p>
+    </div>
+    <div class="col-sm-4 col-md-4 forImage text-center">
+      <img src="/images/journey/cut-suit.png" alt="select fabric">
+      <h3>Try it out</h3>
+      <p class=" pr-60 pl-60">Well crafted suit is ready for trial to ensure the perfect look that you deserve.</p>
+    </div>
+
+    <h3 class="text-center mb-20 wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.6s"><span style="color: #5A2C32;font-family:'Caveat';font-size:25px;">Enjoy
+        your Suit.</span> It is ready to be carried
+      with style.</h3>
+  </div>
+
+</div>
+<!--JOurney area end-->
+
+<!--Journey accuracy starts for large n medium screens-->
+<div class="journeyDiv container mt-100 mb-50">
+  <h2 class=" text-center mt-10 mb-10" style="font-weight: 700;">The Place that guarantees accuracy and mastery</h2>
+  <h3 class=" text-center mt-10 mb-10" style="font-weight: 400;">Marked, cut and stitched with care and precision</h3>
+  <!--for large n medium screens-->
+  <img src="/images/journey/making-suit-images.png" class=" hidden-xs " alt="making suit">
+
+  <!--for small screens-->
+  <div class=" product-active owl-carousel hidden-sm hidden-md hidden-lg">
+    <img src="/images/journey/mark.png" alt="mark">
+    <img src="/images/journey/scissor-cut2.png" alt="scissor">
+    <img src="/images/journey/needle.png" alt="needle">
+  </div>
+</div>
+<!--Journey accuracy large n medium ends -->
+
+<!-- new arrivals area start -->
+<div class="Featured-products-area pt-50 pb-100">
+  <div class="container-fluid mmm" style="padding-left:0px;">
+    <div class="row">
+      <div class="block-featured-warpper col-md-6">
+        <div class="block-featured new-banner">
+          <div class="banner-featured">
+            <img src="/images/journey/new-arrivals.jpg" alt="sss">
+            <div class="centeredNew">
+              <h1 class="wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s" style="color:rgb(245, 243, 245)">A
+                Gentleman's Choice</h1>
+              <h3 class="wow animated fadeInUp mt-20" data-wow-duration="1.5s" data-wow-delay="0.5s" style="color:rgb(245, 243, 245)">Get
+                a suit designed and shaped that <span style="font-weight:1000">suits</span> YOU!</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="pos_new_product">
+          <div class="section-title">
+            <h2>new arrivals</h2>
+          </div>
+          <div class="row">
+            <div class="featured-products">
+              <div class="products-active owl-carousel">
+                {{#each productNew}}
+                <div class="col-md-12">
+                  <div class="single-product">
+                    <div class="product-img">
+                      <a href="/category/{{ProductCategory.category}}/{{Tags.0.tag}}/{{titleLink title}}">
+                        <img class="first-img" src="/data/product/{{id}}/{{ProductImages.0.id}}/300/300" alt="{{title}}">
+                        {{#if ProductFabric}}
+                        <img class="hover-img" src="/data/fabric/{{ProductFabric.id}}/300/300" alt="">
+                        {{/if}}
+                      </a>
+                    </div>
+                    <div class="product-content">
+                      <h2 class=" text-center" style="line-height: 1.5em;height: 3em;word-break: break-word; padding-right:15px;padding-left:15px;font-weight:bold"><a
+                          href="/category/{{ProductCategory.category}}/{{Tags.0.tag}}/{{titleLink title}}">{{title}}</a></h2>
+                      <div class="product-price">
+                        <span class="new-price" style="font-weight:bold">Rs. {{ProductPrices.0.price}}</span>
+                        <ul class="product-action">
+                          {{!-- <li><a href="#" data-toggle="tooltip" title="Add to Wishlist"><i class="ion-android-favorite-outline"></i></a></li>
+                          --}}
+                          <a class="button add-btn" href="/cart/add/{{id}}" data-toggle="tooltip" title="Add to Cart"
+                            style="cursor:pointer"><i class="fa fa-shopping-cart"></i></a>
+                          {{!-- <li><a href="#" data-toggle="modal" title="Quick View" data-target="#myModal"><i class="ion-android-expand"></i></a></li>
+                          --}}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {{/each}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- new arrivals area end -->
+
+<!-- Visit our sotres area start -->
+
+<div class="journeyDiv container mt-20 mb-30">
+  <h2 class=" text-center mb-20" style="font-weight: 700;">Visit Our Stores</h2>
+  <img src="/images/journey/pc-show-1-mm.jpg" alt="store" title="Our Store" />
+
+  {{!-- <div class="slider-wrapper theme-default">
+    <!--Slider Background Image Start-->
+    <div id="slider" class="nivoSlider">
+      <img src="/images/journey/pc-show.jpg" alt="" title="#htmlcaption" />
+      <img src="/images/img/slider/6.jpg" alt="" title="#htmlcaption2" />
+    </div>
+    <!--Slider Background Image End-->
+  </div> --}}
+</div>
+<!-- Visit our sotres area ends -->
+
+<br />
+<!--Brand Area Start-->
+<div class=" journeyDiv brand-area ptb-30">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class=" text-center mb-20" style="font-weight: 700;">Brands</h2>
+
+        <div class="brand-active owl-carousel">
+          <!--Single Brand Start-->
+          <div class="single-brand img-full">
+            <a href="#"><img src="/images/img/brand/zegnaa.png" alt=""></a>
+          </div>
+          <!--Single Brand End-->
+          <!--Single Brand Start-->
+          <div class="single-brand img-full">
+            <a href="#"><img src="/images/img/brand/loropiana.jpeg" alt=""></a>
+          </div>
+          <!--Single Brand End-->
+          <!--Single Brand Start-->
+          {{!-- <div class="single-brand img-full">
+            <a href="#"><img src="/images/img/brand/4.png" alt=""></a>
+          </div> --}}
+          <!--Single Brand End-->
+          <!--Single Brand Start-->
+          {{!-- <div class="single-brand img-full">
+            <a href="#"><img src="/images/img/brand/5.png" alt=""></a>
+          </div> --}}
+          <!--Single Brand End-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Brand Area End-->

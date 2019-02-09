@@ -1,0 +1,200 @@
+<!--Header Area Start-->
+<header>
+  <div class="header-container">
+    <!--Header Top Area Start-->
+    <div class="header-top-area hidden-xs hidden-sm navbar-fixed-top" style="background-color:#F0F0F0">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-xs-12">
+            <div class="logo">
+              <a href="/"><img src="/images/logo-old-horizontal.png" alt=""></a>
+            </div>
+          </div>
+          <!--Search Box Start-->
+          <div class="col-md-9 col-sm-9 col-xs-12">
+            <form action="#" class="mt-10">
+              <div class="searchBaarAdmin ">
+                <input name="search" placeholder="Search..." type="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </div>
+            </form>
+          </div>
+          <!--Search Box End-->
+          <!--Header Top Right Area Start-->
+          <div class="col-md-2 col-sm-2 text-right">
+            <div class="header-top-menu mt-30 mr-100">
+              <ul>
+                {{!-- {{#if user}} --}}
+                {{!-- <li><a href="/logout" class="signUp"><i class=" ion-log-out"></i><b> Logout</b></a></li> --}}
+                {{!-- {{else}} --}}
+                {{!-- <li><a href="/signup" class="signUp"><i class=" ion-log-in"></i> Login</a></li> --}}
+                {{!-- {{/if}} --}}
+              </ul>
+            </div>
+          </div>
+          <!--Header Top Right Area End-->
+        </div>
+      </div>
+    </div>
+    <!--Header Top Area End-->
+
+    <!--Header Top Area starts for Mobile screens-->
+    {{!-- {{#if user}} --}}
+    <div class="header-middel-area-mobile hidden-md hidden-lg">
+      <div class=" container-fluid pt-10 ">
+        <div class="row flex-container">
+          <div class=" col-sm-9 text-center" style="width:100%;background-color:">
+            <a href="/"><img src="/images/logo-old-horizontal.png" alt="" height="70" width="250"></a>
+          </div>
+          <div class="col-sm-3">
+            <i class="fa fa-search pt-20 " style="font-size:20px"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{!-- {{else}}
+    <div class=" hidden"></div>
+    {{/if}} --}}
+    <!--Header Top Area Ends for Mobile screens-->
+
+    <!--Mobile Menu Area Start-->
+    {{!-- {{#if user}} --}}
+    <div class="mobile-menu-area pl-10 hidden-md hidden-lg">
+      <div class=" container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="mobile-menu">
+              <nav>
+                <ul>
+                  <li>
+                    <form action="#">
+                      <div id="searchMobile" class="searchBaarSmall pt-10 pb-10">
+                        <input name="search" placeholder="Search..." type="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                      </div>
+                    </form>
+                  </li>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Products</a></li>
+                  <li><a href="#">Orders</a></li>
+                  <li><a href="#">Users</a></li>
+                  <li><a href="#">Logout</a></li>
+                  {{!-- <ul>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="/cart">Shopping Cart</a></li>
+                    <li><a href="#">Checkout</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                    <li><a href="/signup">Signup</a></li>
+                  </ul>
+                  </li> --}}
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{!-- {{else}}
+    <div class=" hidden"></div>
+    {{/if}} --}}
+    <!--Mobile Menu Area End-->
+  </div>
+</header>
+<!--Header Area End-->
+
+
+<!--Slider Area Start-->
+{{!-- <section class="slider-area ptb-30 white-bg">
+  <div class="container">
+    <div class="row">
+      <!--Categories Menu Start-->
+      <div class="col-md-3 col-sm-3">
+        <div class="side-menu">
+          <div class="category-heading">
+            <h2><i class="ion-android-menu"></i><span>categories</span></h2>
+          </div>
+          <div id="cate-toggle" class="category-menu-list">
+            <ul>
+              <li><a href="#">Fashion & Beauty</a></li>
+
+              <li class="right-menu"><a href="#">Smart Phone & Tablet</a>
+                <!--Category Dropdown Menu Start-->
+                <ul class="cat-dropdown">
+                  <li><a href="shop.html">Brand6</a></li>
+                  <li><a href="shop.html">Brand2</a></li>
+                  <li><a href="shop.html">Brand1</a></li>
+                  <li><a href="shop.html">Brand7</a></li>
+                </ul>
+                <!--Category Dropdown Menu Start-->
+              </li>
+              <li><a href="shop.html">Sport & Outdoor</a></li>
+              <li><a href="shop.html">Automotive & Morocycle</a></li>
+              <li><a href="shop.html">Washing machine</a></li>
+              <li><a href="shop.html">Brand3</a></li>
+              <li><a href="shop.html">Brand2</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--Categories Menu End-->
+    </div>
+  </div>
+</section> --}}
+<!--Slider Area End-->
+
+
+<!-- Side-nav bar for large screen Start-->
+{{!-- {{#if user}} --}}
+<div class="side-nav hidden-sm hidden-xs">
+  <ul>
+    <li>
+      <a href="/admin-panel/dashboard" id="">
+        <span><i class="fa fa-dashboard" aria-hidden="true"></i></span>
+        <span> <b>Dashboard</b></span>
+      </a>
+    </li>
+    <li>
+      <a href="#" id="dropdownProducts">
+        <span><i class="fa fa-product-hunt" aria-hidden="true"></i></span>
+        <span> <b>Products</b></span>
+        <button class=" dropdownButton pull-right"><span class=" caret"></span></button>
+        <ul id="showProducts" style="display:none">
+          <li><a href="/admin-panel/list/suits"><b>- Suits</b></a></li>
+          <li><a href="/admin-panel/list/formal"><b>- Formal</b></a></li>
+          <li><a href="/admin-panel/list/accessories"><b>- Accessories</b></a></li>
+          <li><a href="/admin-panel/product/tags"><b>- Tags</b></a></li>
+        </ul>
+      </a>
+    </li>
+    <li>
+      <a href="/admin-panel/orders" id="">
+        <span><i class="fa fa-shopping-basket" aria-hidden="true"></i></span>
+        <span> <b>Orders</b></span>
+      </a>
+    </li>
+    <li>
+      <a href="#" id="">
+        <span><i class="fa fa-users" aria-hidden="true"></i></span>
+        <span> <b>Users</b></span>
+      </a>
+    </li>
+    <li>
+      <a href="#" id="dropdownReports">
+        <span><i class="fa fa-file" aria-hidden="true"></i></span>
+        <span> <b>Reports</b></span>
+        <button class=" dropdownButton pull-right"><span class=" caret"></span></button>
+        <ul id="showReports" style="display:none">
+          <li><a href="/admin-panel/sales-report"><b>- Sales </b></a></li>
+          <li><a href="/admin-panel/product-report"><b>- Products  </b></a></li>
+          <li><a href="/admin-panel/customer-report"><b>- Customers</b></a></li>
+        </ul>
+      </a>
+    </li>
+    <br />
+  </ul>
+</div>
+{{!-- {{else}}
+<div class=" hidden"></div>
+{{/if}} --}}
+<!--Side-nav bar for large screen End -->

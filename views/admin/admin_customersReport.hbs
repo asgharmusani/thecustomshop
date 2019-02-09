@@ -1,0 +1,86 @@
+<div class="adminMain">
+  <div class=" container-fluid mt-10">
+    <h2 class="mt-20 ml-10 mb-10"><b>Customer Orders Report</b></h2>
+
+    <div class="row adminFilterArea">
+      <div class="col-sm-6 col-md-6">
+        <label for=""><b>Date Start</b></label>
+          <input type="date" class="form-control">
+      </div>
+      <div class="col-sm-6 col-md-6">
+        <label for=""><b>Date End</b></label>
+          <input type="date" class="form-control">
+      </div>
+      <div class="col-sm-6 col-md-6">
+        <label for="" class="mt-10"><b>Order Statuses</b></label><br/>
+        <select data-placeholder="Sort-by" class=" selectAdmin" tabindex="1" style="height:40px;">
+          <option value="0" style="font-size:12px">All Statuses</option>
+          <option value="1" style="font-size:12px">Pending</option>
+          <option value="2" style="font-size:12px">Processing</option>
+          <option value="3" style="font-size:12px">Shipped</option>
+          <option value="4" style="font-size:12px">Canceled</option>
+        </select>
+      </div>
+      <div class="col-sm-6 col-md-6">
+        <button class="mt-20 btn btn-primary" style="float:right"><i class="fa fa-filter"></i> <b>Filter</b></button>
+      </div>
+    </div>
+
+    <!--Product Area Start-->
+    <div class="row mt-20">
+      <div class="col-md-12">
+        <form class="shop-form" action="#">
+          <div class="wishlist-table table-responsive mr-10 ml-10">
+            <table>
+              <thead>
+                <tr>
+                  <th class="product-cart-img">
+                    <span class="nobr"><b>Customer Name</b></span>
+                  </th>
+                  <th class="product-name">
+                    <span class="nobr"><b>Email</b></span>
+                  </th>
+                  <th class="product-cart-img">
+                    <span class="nobr"><b>No. Orders</b></span>
+                  </th>
+                  <th class="product-cart-img">
+                    <span class="nobr"><b>No. Products</b></span>
+                  </th>
+                  <th class="product-cart-img">
+                    <span class="nobr"><b>Total</b></span>
+                  </th>
+                  <th class="product-cart-img">
+                    <span class="nobr"><b>Action</b></span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="product-cart-img">
+                    1
+                  </td>
+                  <td class="product-name">
+                    2
+                  </td>
+                  <td class="product-name">
+                    3
+                  </td>
+                  <td class="product-name">
+                    4
+                  </td>
+                  <td class="product-name">
+                    5
+                  </td>
+                  <td class="product-name">
+                    6
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Product Area End-->
+  </div>
+</div>

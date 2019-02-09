@@ -1,0 +1,487 @@
+<!--Header Area Start-->
+<header>
+  <!-- Favicon links -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5f242c">
+  <meta name="msapplication-TileColor" content="#540d16">
+  <meta name="theme-color" content="#5f242c">
+
+
+  <!-- Start Top Search -->
+  <div class="top-search" id="top-search">
+    <div class="container">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+        <input type="text" class="form-control" placeholder="Search">
+        {{!-- <span class="input-group-addon close-search" id="close-search"><i class="fa fa-times"></i></span> --}}
+      </div>
+    </div>
+  </div>
+  <!-- End Top Search -->
+
+  <div class="header-container" style="background-color:rgb(240, 240, 240);">
+
+    <!--Header sub se Top-->
+
+    <div style=" background-color:#5A2C32;color:white;">
+      <div class="container text-right" style=" ">
+        <div class=" header-top-menu">
+          <ul>
+            <li style="margin-right:5px;padding-top:0px;">Contact Us : +92 21 35302013</li>
+            <li style="margin-right:5px;padding-top:0px;"><a href="/about-us" style="color:white;">About Us</a></li>
+            <li style="margin-right:5px;padding-top:0px;"><a href="https://www.facebook.com/Ambassador-the-custom-shop-149716955166515/"
+                target="_blank" style="font-size:16px;color:white;"><i class=" fa fa-facebook-official"></i></a></li>
+            <li style="padding-top:0px;"><a href="#" style="font-size:16px;color:white;"><i class=" fa fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!--Header Top Area Start-->
+    <div class="header-top-area hidden-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-3" style="color:#000">
+            {{!-- <span>Contact us: 0300-1234567</span> --}}
+            <div class="logo mt-10 mb-10">
+              <a href="/"><img src="/images/logo-old-horizontal.png" alt="amb-logo"></a>
+            </div>
+          </div>
+          <!--Header Top Middle Area Start-->
+
+          <div class="col-md-6 col-sm-6 text-left" style="margin-top:13px">
+
+            <!--Main Menu Area Start-->
+            <div class="main-menu-area" style="right:0px;">
+              <nav>
+                <ul class="main-menu">
+                  {{!-- <li><a href="/">Home</a></li> --}}
+
+                  {{!-- Suits dropdown --}}
+                  <li class=""><a href="/category/suits">Suits</a>
+                    <!--Dropdown Menu Start-->
+                    <ul class="dropdown">
+                      <li><a href="/category/suits/two-piece">Two Piece Suits</a></li>
+                      <li><a href="/category/suits/three-piece">Three Piece Suits</a></li>
+                      <li><a href="/category/suits/jackets">Jackets</a></li>
+                      {{!-- <li><a href="#">Coats</a></li>
+                      <li><a href="#">Waistcoats</a></li> --}}
+                    </ul>
+                    <!--Dropdown Menu End-->
+                  </li>
+
+                  {{!-- Formal Dropdown --}}
+                  <li class=""><a href="/category/formal">Formal</a>
+                    <!--Dropdown Menu Start-->
+                    <ul class="dropdown">
+                      <li><a href="/category/formal/shirts">Shirts</a></li>
+                      {{!-- <li><a href="#">Pants</a></li> --}}
+                    </ul>
+                    <!--Dropdown Menu End-->
+                  </li>
+
+                  {{!-- Accessories Dropdown --}}
+                  <li class=""><a href="/category/accessories">Accessories</a>
+                    <!--Dropdown Menu Start-->
+                    <ul class="dropdown">
+                      <li><a href="/category/accessories/ties">Ties</a></li>
+                      <li><a href="/category/accessories/cuffs">Cuffs</a></li>
+                      {{!-- <li><a href="#">Handkerchiefs</a></li>
+                      <li><a href="#">Buttons</a></li> --}}
+                    </ul>
+                    <!--Dropdown Menu End-->
+                  </li>
+
+                  <li><a href="/contact-us">Contact Us</a></li>
+                </ul>
+              </nav>
+            </div>
+            <!--Main Menu Area End-->
+            {{!-- <div class="logo">
+              <a href="/"><img src="/images/logo.png" alt="logo" height="120" width="150"></a>
+            </div> --}}
+            <!--Header Top Middle Area End-->
+
+          </div>
+          <!--Header Top Right Area Start-->
+          <div class="col-md-3 col-sm-3 text-right" style="margin-top:23px;">
+            <div class="header-top-menu">
+              <ul>
+                <li class="search " id="see"><i class="fa fa-search signUp"></i></li>
+                <li><a href="/cart/show" class="signUp"><i class="fa fa-shopping-bag" style="font-size:16px;"></i><sup
+                      style="font-size:14px;"><b>
+                        {{basket.length}}</b></sup></a></li>
+
+                {{#if user}}
+                {{!-- <li><a href="/logout" class="signUp"><i class=" ion-log-out"></i> Logout</a></li> --}}
+                <li class="account"><a href="#">{{user.fullname}} <i class="fa fa-angle-down"></i></a>
+                  <ul class="ht-dropdown">
+                    <li><a href="/my-account">My Account</a></li>
+                    <li><a href="/checkout">Checkout</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                  </ul>
+                </li>
+                {{else}}
+                <li><a href="/signup" class="signUp"><i class=" ion-log-in" style="font-size:16px;font-weight:700"></i><b>
+                      Login</b></a></li>
+                {{/if}}
+                {{!-- <li class="support"><span>Ordered before 17:30, shipped today - Support: (012) 800 456 789</span></li>
+                --}}
+                {{!-- <li class="account"><a href="#">{{user.fullname}} <i class="fa fa-angle-down"></i></a>
+                  <ul class="ht-dropdown">
+                    <li><a href="/checkout">Checkout</a></li>
+                    <li><a href="/my-account">My Account</a></li>
+                    <li><a href="/cart/show">Shopping Cart</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                  </ul>
+                </li> --}}
+              </ul>
+            </div>
+          </div>
+          <!--Header Top Right Area End-->
+        </div>
+      </div>
+    </div>
+    <!--Header Top Area End-->
+
+    <!--Header Middel Area Start-->
+    {{!-- <div class="header-middel-area hidden-xs">
+      <div class="container">
+        <div class="row"> --}}
+          <!--Logo Start-->
+          {{!-- <div class="col-md-3 col-sm-3 col-xs-12">
+            <div class="logo">
+              <a href="/"><img src="/images/logo.png" alt="" height="80" width="120"></a>
+            </div>
+          </div> --}}
+          <!--Logo End-->
+          <!--Search Box Start-->
+          {{!-- <div class="col-md-6 col-sm-5 col-xs-12">
+            <form action="#">
+              <div class="searchBaar ">
+                <input name="search" placeholder="Search..." type="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </div>
+            </form> --}}
+
+
+            {{!-- <div class="search-box-area">
+              <form action="#">
+                <div class="search-box">
+                  <input type="text" name="search" id="search" placeholder="" value='Search product...' onblur="if(this.value==''){this.value='Search product...'}"
+                    onfocus="if(this.value=='Search product...'){this.value=''}">
+                  <button type="submit"><i class="ion-ios-search-strong"></i></button>
+                </div>
+              </form>
+            </div> --}}
+            {{!--
+          </div> --}}
+          <!--Search Box End-->
+          <!--Mini Cart Start-->
+          {{!-- <div class="col-md-3 col-sm-4 col-xs-12">
+            <div class="mini-cart-area">
+              <ul> --}}
+                {{!-- <li><a href="/wishlist"><i class="fa fa-heart"></i></a></li> --}}
+                {{!-- <li><a href="/cart/show"><i class="ion-android-cart"></i><span class="cart-add">{{basket.length}}</span>
+                    <span class="cart-total">Rs.</span>
+                  </a> --}}
+                  {{!-- <ul class="cart-dropdown">
+                    {{#if basket.length}}
+                    <h4>Shopping Cart is empty</h4>
+                    {{else}}
+                    <h4>something</h4>
+                    {{/if}} --}}
+                    <!--Single Cart Item Start-->
+                    {{!-- <li class="cart-item">
+                      <div class="cart-img">
+                        <a href="#"><img src="/images/img/cart/1.jpg" alt=""></a>
+                      </div>
+                      <div class="cart-content">
+                        <h4><a href="#">natural typesetting</a></h4>
+                        <p class="cart-quantity">Qty:1</p>
+                        <p class="cart-price">$160.00</p>
+                      </div>
+                      <div class="cart-close">
+                        <a href="#" title="Remove"><i class="ion-android-close"></i></a>
+                      </div>
+                    </li> --}}
+                    <!--Single Cart Item Start-->
+                    <!--Single Cart Item Start-->
+                    {{!-- <li class="cart-item">
+                      <div class="cart-img">
+                        <a href="#"><img src="/images/img/cart/2.jpg" alt=""></a>
+                      </div>
+                      <div class="cart-content">
+                        <h4><a href="#">Natural simply random</a></h4>
+                        <p class="cart-quantity">Qty:2</p>
+                        <p class="cart-price">$180.00</p>
+                      </div>
+                      <div class="cart-close">
+                        <a href="#" title="Remove"><i class="ion-android-close"></i></a>
+                      </div>
+                    </li> --}}
+                    <!--Single Cart Item Start-->
+                    <!--Cart Total Start-->
+                    {{!-- <li class="cart-total-amount mtb-20">
+                      <h4>SubTotal : <span class="pull-right">$215.00</span></h4>
+                    </li> --}}
+                    <!--Cart Total End-->
+                    <!--Cart Button Start-->
+                    {{!-- <li class="cart-button">
+                      <a href="#" class="button2">View cart</a>
+                      <a href="#" class="button2">Check out</a>
+                    </li> --}}
+                    <!--Cart Button End-->
+                    {{!-- </ul> --}}
+                  {{!-- </li>
+              </ul>
+            </div>
+          </div>
+          <!--Mini Cart End-->
+        </div>
+      </div>
+
+    </div> --}}
+    <!--Header Middel Area End-->
+
+    <!--Header Middel Area starts for Mobile screens-->
+    <div class="header-middel-area-mobile hidden-sm hidden-md hidden-lg">
+      <!-- Start Top Search -->
+      {{!-- <div class="top-search" id="top-searchSmall">
+        <div class="container">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+            <input type="text" class="form-control" placeholder="Search">
+
+          </div>
+        </div>
+      </div> --}}
+      <!-- End Top Search -->
+      <div class=" container-fluid pt-10 ">
+        <div class="row flex-container">
+          <div class=" col-sm-8 text-center" style="padding-bottom:5px;">
+            <a href="/"><img src="/images/logo-old-horizontal.png" alt="amb-logo"></a>
+          </div>
+          <div class="col-sm-2">
+            <div class=" pt-15 ">
+              <li class="search" id="seeSmall"><i class="fa fa-search" style="font-size:24px;color:#5A2C32"></i></li>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class=" pt-15 pr-10">
+              <li class="side-menu" id="sideNav"><a href="#"><i class="fa fa-bars" style="font-size:24px;color:#5A2C32"></i></a></li>
+            </div>
+          </div>
+
+          <!-- Start Side Menu -->
+          <div class="side">
+            <div class="row side-row">
+              <div class="col-xs-4 side-col">
+                <li><a href="/cart/show" class="signUp" style="color:#fff;padding-left:17px;"><i class="fa fa-shopping-bag"
+                      style="font-size:16px;"></i><sup style="font-size:14px;">
+                      {{basket.length}}</sup></a></li>
+              </div>
+              <div class="col-xs-4 side-col">
+                <li><a href="/signup" style="color:#fff"><i class="fa fa-user-plus" style="font-size:16px;"></i></a></li>
+              </div>
+              <div class="col-xs-4 side-col">
+                <a href="#" class="close-side"><i class="fa fa-times"></i></a>
+              </div>
+            </div>
+            {{!-- <a href="#" class="close-side"><i class="fa fa-times"></i></a> --}}
+            <div class="widgets">
+              <h4 class="title">SUITS</h4>
+              <ul class="link">
+                <li><a href="/category/suits/two-piece">Two Piece Suits</a></li>
+                <li><a href="/category/suits/three-piece">Three Piece Suits</a></li>
+                <li><a href="/category/suits/jackets">Jackets</a></li>
+              </ul>
+            </div>
+            <div class="widgets">
+              <h4 class="title">FORMAL</h4>
+              <ul class="link">
+                <li><a href="/category/formal/shirts">Shirts</a></li>
+              </ul>
+            </div>
+            <div class="widgets">
+              <h4 class="title">ACCESSORIES</h4>
+              <ul class="link">
+                <li><a href="/category/accessories/ties">Ties</a></li>
+                <li><a href="/category/accessories/cuffs">Cuffs</a></li>
+              </ul>
+            </div>
+            <div class=" widgets">
+              <h4 class=" title"><a href="/contact-us">Contact Us</a></h4>
+              <h4 class=" title"><a href="/about-us">About Us</a></h4>
+            </div>
+          </div>
+          <!-- End Side Menu -->
+
+          {{!-- <div class=" col-sm-5 pull-right" style="width:100%;">
+            <div class=" signUp-search pull-right">
+              <a href="/signup"><i class=" ion-log-in"></i> SignUp</a>
+              <a href="/cart" class=" pull-right"><i class="fa fa-shopping-bag "></i> Cart </a> <br />
+              <i class="fa fa-search pt-10 pull-right"></i>
+              <form action="#">
+                <div class="searchBaarSmall">
+                  <input name="search" placeholder="Search..." type="search">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+              </form>
+            </div>
+          </div> --}}
+          {{!-- <div class=" col-sm-2 pull-right" style="background-color:rgb(36, 54, 0)">
+            <span><a href="/signup" class="signUp"><i class=" ion-log-in"></i> SignUp</a></span> |
+            <i class="fa fa-shopping-bag"></i>
+          </div> --}}
+        </div>
+      </div>
+    </div>
+    <!--Header Middel Area Ends for Mobile screens-->
+
+    <!--Header bottom Area Start-->
+    <div class="header-bottom-area header-sticky" style="background-color:rgb(240, 240, 240);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <!--Logo Sticky Start-->
+            <div class="logo-sticky pb-10">
+              <a href="/"><img src="/images/logo-old-horizontal.png" alt="amb-logo" height="60"></a>
+            </div>
+            <!--Logo Sticky End-->
+            <!--Main Menu Area Start-->
+            <div class="main-menu-area tempHide mt-10">
+              <nav>
+                <ul class="main-menu">
+                  {{!-- <li><a href="/">Home</a></li> --}}
+
+                  {{!-- Suits dropdown --}}
+                  <li class=""><a href="/category/suits">Suits</a>
+                    <!--Dropdown Menu Start-->
+                    <ul class="dropdown">
+                      <li><a href="/category/suits/two-piece">Two Piece Suits</a></li>
+                      <li><a href="/category/suits/three-piece">Three Piece Suits</a></li>
+                      <li><a href="#">Jackets</a></li>
+                      {{!-- <li><a href="#">Coats</a></li>
+                      <li><a href="#">Waistcoats</a></li> --}}
+                    </ul>
+                    <!--Dropdown Menu End-->
+                  </li>
+
+                  {{!-- Formal Dropdown --}}
+                  <li class=""><a href="/category/formal">Formal</a>
+                    <!--Dropdown Menu Start-->
+                    <ul class="dropdown">
+                      <li><a href="/category/formal/shirts">Shirts</a></li>
+                      {{!-- <li><a href="#">Pants</a></li> --}}
+                    </ul>
+                    <!--Dropdown Menu End-->
+                  </li>
+
+                  {{!-- Accessories Dropdown --}}
+                  <li class=""><a href="/category/accessories">Accessories</a>
+                    <!--Dropdown Menu Start-->
+                    <ul class="dropdown">
+                      <li><a href="/category/accessories/ties">Ties</a></li>
+                      <li><a href="/category/accessories/cuffs">Cuffs</a></li>
+                      {{!-- <li><a href="#">Handkerchiefs</a></li>
+                      <li><a href="#">Buttons</a></li> --}}
+                    </ul>
+                    <!--Dropdown Menu End-->
+                  </li>
+
+                  <li><a href="/contact-us">Contact Us</a></li>
+                </ul>
+              </nav>
+            </div>
+            <!--Main Menu Area End-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Header bottom Area End-->
+
+    <!--Mobile Menu Area Start-->
+    <div class="mobile-menu-area pl-10 hidden-sm hidden-md hidden-lg" style="display:none">
+      <div class=" container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="mobile-menu">
+              <nav>
+                <ul>
+                  {{!-- <li>
+                    <form action="#">
+                      <div id="searchMobile" class="searchBaarSmall pt-10 pb-10">
+                        <input name="search" placeholder="Search..." type="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                      </div>
+                    </form>
+                  </li> --}}
+                  <li><a href="/my-account">Account</a>
+                    <ul>
+                      {{#if user}}
+                      <li><a href="#">Profile</a></li>
+                      <li><a href="/cart/show">Shopping Cart</a></li>
+                      <li><a href="#">Checkout</a></li>
+                      <li><a href="/logout">Logout</a></li>
+                      {{else}}
+                      <li><a href="/signup">Signup</a></li>
+                      <li><a href="/cart/show">Shopping Cart</a></li>
+                      {{/if}}
+                    </ul>
+                  </li>
+                  <li><a href="#">Suits</a>
+                    <ul>
+                      <li><a href="/category/suits/two-piece">Two Piece Suits</a></li>
+                      <li><a href="/category/suits/three-piece">Three Piece Suits</a></li>
+                      <li><a href="#">Jackets</a></li>
+                      {{!-- <li><a href="#">Coats</a></li>
+                      <li><a href="#">Waistcoats</a></li> --}}
+                    </ul>
+                  </li>
+                  {{!-- Formal Dropdown --}}
+                  <li><a href="#">Formal</a>
+                    <ul>
+                      <li><a href="/category/formal/shirts">Shirts</a></li>
+                      {{!-- <li><a href="/category/suits/three-piece">Pants</a></li> --}}
+                    </ul>
+                  </li>
+
+                  {{!-- Accessories Dropdown --}}
+                  <li><a href="#">Accessories</a>
+                    <ul>
+                      <li><a href="/category/accessories/ties">Ties</a></li>
+                      <li><a href="/category/accessories/cuffs">Cuffs</a></li>
+                      {{!-- <li><a href="#">Handkerchiefs</a></li> --}}
+                      {{!-- <li><a href="#">Buttons</a></li> --}}
+                    </ul>
+                    <!--Dropdown Menu End-->
+                  </li>
+
+                  <li><a href="/contact-us">Contact Us</a></li>
+
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Mobile Menu Area End-->
+  </div>
+</header>
+<!--Header Area End-->
+
+<script type="text/javascript">
+  // Search toggle code in => js/vendor/jquery-1.12.4.min.js 
+
+  function me() {
+    // alert('me trigred');
+    var x = document.getElementById('searchMobile');
+    x.focus();
+  }
+</script>

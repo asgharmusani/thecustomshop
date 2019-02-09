@@ -1,0 +1,161 @@
+<div class="adminMain">
+  <div class=" container-fluid">
+    <div class="row mtb-20">
+      <div class="col-lg-12 col-md-12">
+        <div class="shop-desc-container">
+          <div class="row mb-20">
+            <a role="button" href="/admin-panel/product-detail" class=" form-button">Add Product</a>
+          </div>
+        </div>
+        <!--Shop Tab Menu Start-->
+        <div class="shop-tab-menu">
+          <div class="row">
+            <!--List & Grid View Menu Start-->
+            <div class="col-md-5 col-sm-5 col-lg-6 col-xs-12">
+              <div class="shop-tab">
+                <ul>
+                  {{!-- <li class="active"><a data-toggle="tab" href="#grid-view"><i class="ion-android-apps"></i></a></li>
+                  --}}
+                  {{!-- <li><a data-toggle="tab" href="#list-view"><i class="ion-navicon-round"></i></a></li> --}}
+                </ul>
+              </div>
+            </div>
+            <!--List & Grid View Menu End-->
+            <!-- View Mode Start-->
+            <div class="col-md-7 col-sm-7 col-lg-6 hidden-xs text-right">
+              <div class="toolbar-form">
+                <form action="#">
+                  <div class="toolbar-select">
+                    <span>Sort by:</span>
+                    <select data-placeholder="Choose a Country..." class="order-by" tabindex="1">
+                      <option value="Default sorting">Price</option>
+                      <option value="United States">Color</option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+              <div class="show-result">
+                <p>Showing 1–12 of xyz results</p>
+              </div>
+            </div>
+            <!-- View Mode End-->
+          </div>
+        </div>
+        <!--Shop Tab Menu End-->
+
+        <!--Product Area Start-->
+        <div class="row mt-20">
+          <div class="col-md-12">
+            <form class="shop-form" action="#">
+              <div class="wishlist-table table-responsive">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="product-remove"></th>
+                      <th class="product-cart-img">
+                        <span class="nobr"><b>Product Image</b></span>
+                      </th>
+                      <th class="product-name">
+                        <span class="nobr"><b>Product Name</b></span>
+                      </th>
+                      <th class="product-quantity">
+                        <span class="nobr"><b>quantity</b></span>
+                      </th>
+                      <th class="product-price">
+                        <span class="nobr"><b> Unit Price</b> </span>
+                      </th>
+                      <th class="product-total-price">
+                        <span class="nobr"><b> Edit Product</b> </span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {{#each products}}
+                    <tr>
+                      <td class="product-remove">
+                        <a href="/cart/remove/{{id}}" title="Remove {{title}}"><i class=" fa fa-trash" style="color:rgb(170, 15, 15)"></i></a>
+                      </td>
+                      <td class="product-cart-img">
+                        <a href="/category/{{ProductCategory.category}}/{{Tags.0.tag}}/{{titleLink title}}">
+                          <img src="/data/product/{{id}}/{{ProductImages.0.id}}/150/150" alt=""></a>
+                      </td>
+                      <td class="product-name">
+                        <a href="/category/{{ProductCategory.category}}/{{Tags.0.tag}}/{{titleLink title}}">{{title}}</a>
+                      </td>
+                      <td class="product-quantity">
+                        <div class="quantityCart">
+                          <span><b>{{current_stock}}</b></span>
+                        </div>
+                      </td>
+                      <td class="product-price">
+                        <span style="font-weight:600;font-size:14px"> Rs. {{ProductPrices.0.price}}</span>
+                      </td>
+                      <td class="product-total-price">
+                        <a class="button add-btn" href="/admin-panel/product/update/{{id}}" data-toggle="tooltip"
+                          data-action="add-to-cart" title="Edit Product" style="cursor:pointer">Edit</a>
+                      </td>
+                    </tr>
+                    {{/each}}
+                  </tbody>
+                </table>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!--Product Area End-->
+
+
+        <!--Shop Product Area Start
+      <div class="shop-product-area">
+       <div class="tab-content">
+         
+        <div id="grid-view" class="tab-pane fade in active">
+         <div class="row">
+          <div class="product-container">
+            
+             {{#each products}}
+           <div class="col-md-3 col-sm-3 item-col2">
+            <div class="single-product">
+             <div class="product-img">
+              <a href="/category/{{ProductCategory.category}}/{{Tags.0.tag}}/{{titleLink title}}">
+               <img class="first-img" src="/data/product/{{id}}/{{ProductImages.0.id}}/300/300" alt="">
+               <img class="hover-img" src="/data/fabric/{{ProductFabric.id}}/300/300" alt="">
+              </a>
+             </div>
+             <div class="product-content">
+              <h2 class=" text-center" style="line-height: 1.5em;height: 3em;word-break: break-all; padding-right:15px;padding-left:15px;"><a id="textTitle" href="/category/{{ProductCategory.category}}/{{Tags.0.tag}}/{{titleLink title}}">{{title}}</a></h2>
+              <div class="product-price">
+               <span class="new-price">Rs. {{ProductPrices.0.price}}</span>
+               <ul class="product-action">
+               <a class="button add-btn" href="/admin-panel/product/{{title}}/edit" data-toggle="tooltip" data-action = "add-to-cart" title="Edit Product" style="cursor:pointer">Edit Product</a>
+               </ul>
+              </div>
+             </div>
+            </div>
+           </div>
+            {{/each}}
+            
+          </div>
+         </div>
+        </div>
+        
+       </div>
+      </div>
+      Shop Product Area End-->
+        <!--Pagination Start-->
+        <div class="pagination pb-10">
+          <ul class="page-number">
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+          </ul>
+        </div>
+        <!--Pagination End-->
+      </div>
+      <!--Shop Product Area End-->
+
+    </div>
+  </div>
+</div>

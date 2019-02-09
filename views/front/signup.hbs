@@ -1,0 +1,102 @@
+<!--My Account Area Start-->
+<section class="my-account-area mt-20">
+  <div class="container">
+    <div class="row">
+      <!--Login Form Start-->
+      <div class="col-md-6 col-sm-6">
+        <div class="customer-login-register">
+          <div class="form-login-title">
+            <h2>Login</h2>
+          </div>
+          <div class="login-form">
+            <form id="loginForm" method="POST">
+              <div class="form-fild">
+                <p><label>Email address <span class="required">*</span></label></p>
+                <input id="loginEmail" type="email" name="loginEmail" value="" onfocusout="return loginEmailFieldReset()">
+                <label id="loginEmailError" class=" small displayNoneRequired">Required field</label>
+                <label id="loginEmailFormatError" class=" small displayNoneRequired">Something wrong with email.</label>
+              </div>
+              <div class="form-fild">
+                <p><label>Password <span class="required">*</span></label></p>
+                <input id="loginPassword" type="password" name="loginPassword" value="" onfocusout="return loginPasswordFieldReset()">
+                <label id="loginPasswordError" class=" small displayNoneRequired">Required field</label>
+              </div>
+              <div class="lost-password">
+                <label>
+                  <input id="loginRemember" class="checkbox" type="checkbox" name="rememberme" value="">
+                  <span>Remember me</span>
+                </label>
+                <a href="#">Lost your password?</a>
+              </div>
+              <label id="serverSideError" style="color:red"></label>
+              <div class="login-submit">
+                <button type="submit" class="loginCustomBtn">Login</button>
+              </div>
+            </form>
+            <div class="login-submit">
+              <button type="button" class="loginBtnFacebook"><i class=" fa fa-facebook"></i> Login with Facebook</button>
+            </div>
+            <div class="login-submit">
+              <button type="button" class="loginBtnGoogle"><i class=" fa fa-google"></i> Sign in with Google</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--Login Form End-->
+      <!--Register Form Start-->
+      <div class="col-md-6 col-sm-6">
+        <div class="customer-login-register register-pt-0">
+          <div class="form-register-title">
+            <h2>Register</h2>
+          </div>
+          <div class="register-form">
+            <form id="registrationForm" method="POST">
+              <div class="form-fild">
+                <p><label>Full Name <span class="required">*</span></label></p>
+                <input id="regName" type="text" name="fullname" value="" onfocusout="return nameFieldReset()">
+                <label id="regNameError" class=" small displayNoneRequired">Required field</label>
+              </div>
+
+              <div class="form-fild">
+                <p><label>Email address <span class="required">*</span></label></p>
+                <input id="regEmail" type="email" name="email" value="" onfocusout="return emailFieldReset()">
+                <label id="regEmailError" class=" small displayNoneRequired">Required field</label>
+              </div>
+
+              <div class="form-fild">
+                <p><label>Phone Number <span class="required">*</span></label></p>
+                <input id="regPhone" type="tel" name="phone" value="" onfocusout="return phoneFieldReset()">
+                <label id="regPhoneError" class=" small displayNoneRequired">Required field</label>
+              </div>
+
+              <div class="form-fild">
+                <p><label>Password <span class="required">*</span></label></p>
+                <input id="regPassword" type="password" name="password" value="" onfocusout="return passwordFieldReset()">
+                <label id="regPasswordError" class=" small displayNoneRequired">Required field</label>
+              </div>
+
+              <div class="form-fild">
+                <p><label>Confirm Password <span class="required">*</span></label></p>
+                <input id="regConfirmPassword" type="password" name="confirmPassword" value="" onfocusout="return confirmPasswordFieldReset()">
+                <label id="regConfirmPasswordError" class=" small displayNoneRequired">Required field</label>
+                <label id="regsamePassword" class=" small displayNoneRequired">Password and confirm Password must be
+                  same.</label>
+              </div>
+              <label id="serverSideErrorSignup" style="color:red"></label>
+              <div class="register-submit">
+                <button type="submit" class="form-button">Register</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!--Register Form End-->
+    </div>
+  </div>
+</section>
+<!--My Account Area End-->
+
+
+{{!-- SignUp js --}}
+<script src="/js/custom/signup.js"></script>

@@ -1,0 +1,17 @@
+SET FOREIGN_KEY_CHECKS = 0;
+DROP TABLE IF EXISTS `cart`;
+DROP TABLE IF EXISTS `product_stock`;
+DROP TABLE IF EXISTS `fabric_tag`;
+DROP TABLE IF EXISTS `product`;
+DROP TABLE IF EXISTS `product_category`;
+DROP TABLE IF EXISTS `product_fabric`;
+DROP TABLE IF EXISTS `product_image`;
+DROP TABLE IF EXISTS `product_price`;
+DROP TABLE IF EXISTS `product_tag`;
+DROP TABLE IF EXISTS `sessions`;
+DROP TABLE IF EXISTS `tag`;
+DROP TABLE IF EXISTS `user`;
+DROP TABLE IF EXISTS `user_detail`;
+DROP TABLE IF EXISTS `user_measurement`;
+DROP TABLE IF EXISTS `user_measurement_detail`;
+DROP TABLE IF EXISTS `user_wish`;

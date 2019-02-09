@@ -1,0 +1,366 @@
+<div class="wrapper">
+  <!--Heading Banner Area Start-->
+  <div class="heading-banner-area pt-10 pl-15">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="heading-banner">
+            <div class="breadcrumbs">
+              <ul class="breadcrumb">
+                <!--Bootstrap's own class-->
+                <li><a href="/"><i class="fa fa-home"></i></a></li>
+                <li>Shop</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Heading Banner Area End-->
+  <!--Product List Grid View Area Start-->
+  <div class="product-list-grid-view-area mt-40">
+    <div class="container">
+      <div class="row">
+        <!--Shop Product Area Start-->
+        <div class="col-lg-9 col-lg-push-3 col-md-9 col-md-push-3">
+          <div class="shop-desc-container">
+            <div class="row">
+              <!--Shop Product Image Start-->
+              <div class="col-md-12">
+                <div class="shop-product-img mb-30 img-full headerImage img-rounded">
+                  <img src={{imageUrl}} alt="Suits header">
+                </div>
+              </div>
+              <!--Shop Product Image Start-->
+            </div>
+          </div>
+          <!--Shop Tab Menu Start-->
+          <div class="shop-tab-menu">
+            <div class="row">
+              <!--List & Grid View Menu Start-->
+              <div class="col-md-5 col-sm-5 col-lg-6 col-xs-12">
+                <div class="shop-tab">
+                  <ul>
+                    <li class="active"><a data-toggle="tab" href="#grid-view"><i class="ion-android-apps"></i></a></li>
+                    <li><a data-toggle="tab" href="#list-view"><i class="ion-navicon-round"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <!--List & Grid View Menu End-->
+              <!-- View Mode Start-->
+              <div class="col-md-7 col-sm-7 col-lg-6 hidden-xs text-right">
+                <div class="toolbar-form">
+                  <form action="#">
+                    <div class="toolbar-select">
+                      <span>Sort by:</span>
+                      <select onchange="location = this.value;" data-placeholder="Sort-by" class="order-by" tabindex="1"
+                        style="width:150px;">
+                        <option value="{{path}}?sort=createdAt&order=desc" style="font-size:12px">Latest</option>
+                        <option value="{{path}}?sort=title&order=asc" style="font-size:12px">Name - A to Z</option>
+                        <option value="{{path}}?sort=title&order=desc" style="font-size:12px">Name - Z to A</option>
+                        <option value="{{path}}?sort=price&order=asc" style="font-size:12px">Price - Low to High</option>
+                        <option value="{{path}}?sort=price&order=desc" style="font-size:12px">Price - High to Low</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+                <div class="show-result">
+                  <p>Showing {{startCount}}-{{endCount}} of {{count}} results</p>
+                </div>
+              </div>
+              <!-- View Mode End-->
+            </div>
+          </div>
+          <!--Shop Tab Menu End-->
+          <!--Shop Product Area Start-->
+          <div class="shop-product-area">
+            <div class="tab-content">
+              <!--Grid View Start-->
+              <div id="grid-view" class="tab-pane fade in active">
+                <div class="row">
+                  <div class="product-container">
+                    <!--Single Product Start-->
+                    {{#each products}}
+                    <div class="col-md-4 col-sm-4 item-col2">
+                      <div class="single-product">
+                        {{#unless haveStock}}
+                        <span class="sickerCustom">Out of Stock</span>
+                        {{/unless}}
+                        <div class="product-img">
+                          <a href="/category/{{ProductCategory.category}}/{{Tags.0.tag}}/{{titleLink title}}">
+                            <img class="first-img" src="/data/product/{{id}}/1/300/300" alt="">
+                            {{#if ProductFabric}}
+                            <img class="hover-img" src="/data/fabric/{{ProductFabric.id}}/300/300" alt="">
+                            {{/if}}
+                          </a>
+                        </div>
+                        <div class="product-content">
+                          <h2 class=" text-center" style="line-height: 1.5em;height: 3em;word-break: break-all; padding-right:15px;padding-left:15px;font-weight:bold"><a
+                              id="textTitle" href="/category/{{ProductCategory.category}}/{{Tags.0.tag}}/{{titleLink title}}">{{title}}</a></h2>
+                          <div class="product-price">
+                            <span class="new-price" style="font-weight:bold">Rs. {{ProductPrices.0.price}}</span>
+                            <ul class="product-action">
+                              {{!-- <li><a href="#" data-toggle="tooltip" title="Add to Wishlist"><i class="ion-android-favorite-outline"></i></a></li>
+                              --}}
+                              <a href="/cart/add/{{id}}" class="button add-btn" data-toggle="tooltip" title="Add to Cart"
+                                style="cursor:pointer">add
+                                to cart</a>
+                              {{!-- <li><a href="#" data-toggle="tooltip" title="Compare"><i class="ion-ios-shuffle-strong"></i></a></li>
+                              --}}
+                              {{!-- <li><a href="#" data-toggle="modal" title="Quick View" data-target="#myModal"><i
+                                    class="ion-android-expand"></i></a></li> --}}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {{/each}}
+                    <!--Single Product End-->
+                  </div>
+                </div>
+              </div>
+              <!--Grid View End-->
+              <!--List View Start-->
+              <div id="list-view" class="tab-pane fade">
+                <div class="row">
+                  <div class="all-prodict-item-list pt-10">
+                    <!--Single Product List Start-->
+                    {{#each products}}
+                    <div class="col-md-12">
+                      <div class="single-item">
+                        {{#if haveStock}}
+                        <span></span>
+                        {{else}}
+                        <span class="sickerCustomList">Out of Stock</span>
+                        {{/if}}
+                        <div class="product-img img-full">
+                          <div class="col-md-4 col-sm-4">
+                            <a href="/category/{{ProductCategory.category}}/{{Tags.0.tag}}/{{titleLink title}}">
+                              <img class="first-img" src="/data/product/{{id}}/1/300/300" alt="">
+                              {{#if ProductFabric}}
+                              <img class="hover-img" src="/data/fabric/{{ProductFabric.id}}/300/300" alt="">
+                              {{/if}}
+                            </a>
+                          </div>
+                          <div class="col-md-8 col-sm-8">
+                            <div class="product-content-2">
+                              <h2><a href="/category/{{ProductCategory.category}}/{{Tags.0.tag}}/{{titleLink title}}">{{title}}</a></h2>
+
+                              <div class="product-price mb-20">
+                                <span class="new-price">Rs. {{ProductPrices.0.price}}</span>
+                              </div>
+                              <div class="product-discription">
+                                <p>{{description}}</p>
+                              </div>
+                              <div class="pro-action-2">
+                                <ul class="product-cart-area-list">
+                                  {{!-- <li><a class="action-btn small" href="#" data-toggle="tooltip" title="Add to Wishlist"><i
+                                        class="ion-android-favorite-outline"></i></a></li> --}}
+                                  <li><a href="/cart/add/{{id}}" class="action-btn big" data-toggle="tooltip" title="Add to Cart"
+                                      style="cursor:pointer">
+                                      Add to cart</a></li>
+                                  {{!-- <li><a class="action-btn small" href="#" data-toggle="modal" title="Quick View"
+                                      data-target="#myModal"><i class="ion-android-expand"></i></a></li> --}}
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {{/each}}
+
+                  </div>
+                </div>
+              </div>
+              <!--List View End-->
+            </div>
+          </div>
+          <!--Shop Product Area End-->
+          <!--Pagination Start-->
+          <div class="pagination pb-10">
+            <ul class="page-number">
+              <li><a href="{{pageStart pathOriginal}}/page/1"><i class="fa fa-angle-double-left"></i></a></li>
+              <li><a href="{{pageStart pathOriginal}}/page/{{decrementPage currentPage pathOriginal}}"><i class="fa fa-angle-left"></i></a></li>
+              {{{generatePagination pages path currentPage}}}
+              <li><a href="{{pageStart pathOriginal}}/page/{{incrementPage currentPage pages pathOriginal}}"><i class="fa fa-angle-right"></i></a></li>
+              <li><a href="{{pageStart pathOriginal}}/page/{{pages}}"><i class="fa fa-angle-double-right"></i></a></li>
+            </ul>
+          </div>
+          <!--Pagination End-->
+        </div>
+        <!--Shop Product Area End-->
+        <!--Left Sidebar Start-->
+        <div class="col-lg-3 col-lg-pull-9 col-md-3 col-md-pull-9">
+          <!--Widget Shop Categories start-->
+          <div class="widget widget-shop-categories">
+            <h3 class="widget-shop-title">colors</h3>
+            <div class="widget-content">
+              <ul class="product-categories">
+                <li><a href="#">Black</a></li>
+                <li><a href="#">Brown</a></li>
+                <li><a href="#">Blue</a></li>
+                <li><a href="#">White</a></li>
+                <li><a href="#">Grey</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--Widget Shop Categories End-->
+          <!--Widget Price Slider Start-->
+          {{!-- <div class="widget widget-price-slider">
+            <h3 class="widget-title">Filter by price</h3>
+            <div class="widget-content">
+              <div class="price-filter">
+                <form action="#">
+                  <div id="slider-range"></div>
+                  <span>Price:<input id="amount" class="amount" readonly="" type="text"></span>
+                  <input class="price-button" value="Filter" type="button">
+                </form>
+              </div>
+            </div>
+          </div> --}}
+          <!--Widget Price Slider End-->
+          <!--Widget Brand Start-->
+          <div class="widget widget-brand">
+            <h3 class="widget-title">Pattern</h3>
+            <div class="widget-content">
+              <ul class="brand-menu">
+                <li><input type="checkbox"><a href="#">Solid</a> <span class="pull-right">(16)</span></li>
+                <li><input type="checkbox"><a href="#">Checked</a> <span class="pull-right">(4)</span></li>
+                <li><input type="checkbox"><a href="#">Stripped</a> <span class="pull-right">(9)</span></li>
+
+              </ul>
+            </div>
+          </div>
+          <!--Widget Brand End-->
+          <!--Widget Manufacture Start-->
+          {{!-- <div class="widget widget-manufacture">
+            <h3 class="widget-title">MANUFACTURER</h3>
+            <div class="widget-content">
+              <ul class="brand-menu">
+                <li><input type="checkbox"><a href="#">Pellentesque</a> <span class="pull-right">(1)</span></li>
+              </ul>
+            </div>
+          </div> --}}
+          <!--Widget Manufacture End-->
+          <!--Widget Color Start-->
+          {{!-- <div class="widget widget-color">
+            <h3 class="widget-title">Color</h3>
+            <div class="widget-content">
+              <ul class="brand-menu">
+                <li><input type="checkbox"><a href="#">Gold</a> <span class="pull-right">(1)</span></li>
+                <li><input type="checkbox"><a href="#">Green</a> <span class="pull-right">(1)</span></li>
+                <li><input type="checkbox"><a href="#">White</a> <span class="pull-right">(1)</span></li>
+              </ul>
+            </div>
+          </div> --}}
+          <!--Widget Color End-->
+          <!--Widget Compare Start-->
+          {{!-- <div class="widget widget-compare">
+            <h3 class="widget-compare-title">Compare</h3>
+            <div class="widget-content">
+              <ul class="compare-menu">
+                <li>
+                  <a class="title" href="#">Cillum dolore</a>
+                  <a class="pull-right" href="#"><i class="fa fa-times"></i></a>
+                </li>
+                <li>
+                  <a class="title" href="#">Cillum dolore</a>
+                  <a class="pull-right" href="#"><i class="fa fa-times"></i></a>
+                </li>
+              </ul>
+              <a class="clear-all" href="#">Clear all</a>
+              <a class="compare-btn" href="#">compare</a>
+            </div>
+          </div> --}}
+          <!--Widget Compare End-->
+          <!--Widget Tag Start-->
+          {{!-- <div class="widget widget-tag">
+            <h3 class="widget-shop-tag-title">Popular Tags</h3>
+            <ul>
+              <li><a href="#">asian</a></li>
+
+              <li><a href="#">white</a></li>
+            </ul>
+          </div> --}}
+          <!--Widget Tag End-->
+        </div>
+        <!--Left Sidebar End-->
+      </div>
+    </div>
+  </div>
+  <!--Product List Grid View Area End-->
+  <!--Brand Area Start-->
+  {{!-- <div class="brand-area ptb-30 white-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="brand-active owl-carousel">
+            <!--Single Brand Start-->
+            <div class="single-brand img-full">
+              <a href="#"><img src="/images/img/brand/1.png" alt=""></a>
+            </div>
+            <!--Single Brand End-->
+            <!--Single Brand Start-->
+            <div class="single-brand img-full">
+              <a href="#"><img src="/images/img/brand/2.png" alt=""></a>
+            </div>
+            <!--Single Brand End-->
+            <!--Single Brand Start-->
+            <div class="single-brand img-full">
+              <a href="#"><img src="/images/img/brand/3.png" alt=""></a>
+            </div>
+            <!--Single Brand End-->
+            <!--Single Brand Start-->
+            <div class="single-brand img-full">
+              <a href="#"><img src="/images/img/brand/4.png" alt=""></a>
+            </div>
+            <!--Single Brand End-->
+            <!--Single Brand Start-->
+            <div class="single-brand img-full">
+              <a href="#"><img src="/images/img/brand/5.png" alt=""></a>
+            </div>
+            <!--Single Brand End-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> --}}
+  <!--Brand Area End-->
+
+  <!--Modal Start-->
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal Content Strat-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!--Product Img End-->
+        <!-- Product Content Start-->
+        <div class="col-md-7 col-sm-7">
+          <div class="product-info">
+            <h2>Natural passages</h2>
+            <div class="product-price">
+              <span class="old-price">$74.00</span>
+              <span class="new-price">$69.00</span>
+            </div>
+            <a href="#" class="see-all">See all features</a>
+            <div class="add-to-cart quantity">
+              <form class="add-quantity" action="#">
+                <div class="quantity modal-quantity">
+                  <label>Quantity</label>
+                  <input type="number" min="1">
+                </div>
+                <div class="add-to-link">
+                  <button class="form-button" data-text="add to cart">add to cart</button>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!--Modal Content Strat-->
+      </div>
+    </div>
+    <!--Modal End-->
+  </div>

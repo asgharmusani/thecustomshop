@@ -1,0 +1,65 @@
+<div class="adminMain">
+  {{#if flashMessage}}
+  <div id="message" data-status="{{flashMessage.status}}" data-value="{{flashMessage.value}}"></div>
+  {{/if}}
+  <div class=" container-fluid mt-10">
+    <h1 class="mt-10">Tags</h1>
+    <button class=" form-button" data-toggle="modal" data-target="#addTagModal">Add New Tag</button>
+    <!--Product Area Start-->
+    <div class="row mt-20">
+      <div class="col-md-12">
+        <form class="shop-form" action="#">
+          <div class="wishlist-table table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th class="product-cart-img">
+                    <span class="nobr"><b>Tag name</b></span>
+                  </th>
+                  <th class="product-name">
+                    <span class="nobr"><b>Delete Tag</b></span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {{#each tags}}
+                <tr>
+                  <td class="product-cart-img">
+                    {{tag}}
+                  </td>
+                  <td class="product-name">
+                    <button class="btn btn-danger">X</button>
+                  </td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Product Area End-->
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="addTagModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content" style="border-radius:0px 15px 0px 15px;">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><b>Add tag</b></h4>
+      </div>
+      <div class="modal-body" style="text-align: center">
+        <input type="text" placeholder="Enter Tag" class=" form-control">
+        <button class="btn btn-success mt-10">Save</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
